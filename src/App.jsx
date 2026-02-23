@@ -17,6 +17,10 @@ import {
   FaBed,
   FaBrain,
   FaExternalLinkAlt,
+  FaSearch,
+  FaUsers,
+  FaDiscord,
+  FaShieldAlt,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -211,6 +215,16 @@ function Services() {
       description: "End-to-end builds for businesses. Responsive, fast, SEO-friendly. From takeaways to tech startups. You name it, I'll build it.",
       icons: [<FaReact key="r2" />, <SiTailwindcss key="tw2" />],
     },
+    {
+      title: "Research",
+      description: "Need something investigated? Market research, competitor analysis, deep-dives into protocols, tokenomics breakdowns, or tech feasibility reports. I'll dig until I find answers.",
+      icons: [<FaSearch key="sr" />, <FaBrain key="br" />],
+    },
+    {
+      title: "Community Management",
+      description: "Discord admin, Telegram mod, community engagement, announcements, onboarding new members, handling support tickets, and keeping the vibes immaculate. Your community, professionally managed.",
+      icons: [<FaDiscord key="dc" />, <FaUsers key="us" />, <FaShieldAlt key="sh" />],
+    },
   ];
 
   return (
@@ -224,7 +238,7 @@ function Services() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, i) => (
             <motion.div
               key={i}
@@ -293,6 +307,34 @@ function Pricing() {
       ],
       highlight: false,
     },
+    {
+      name: "Researcher",
+      price: "150",
+      unit: "/job",
+      description: "One-off research tasks. Pay per deliverable, not per hour of Googling.",
+      features: [
+        { text: "Market & competitor research", included: true },
+        { text: "Protocol & tokenomics deep-dives", included: true },
+        { text: "Tech feasibility reports", included: true },
+        { text: "Written report delivered", included: true },
+        { text: "Follow-up Q&A included", included: true },
+      ],
+      highlight: false,
+    },
+    {
+      name: "Community Manager",
+      price: "200",
+      unit: "/week",
+      description: "Ongoing community management. Your Discord/Telegram, professionally run.",
+      features: [
+        { text: "Discord & Telegram moderation", included: true },
+        { text: "Daily community engagement", included: true },
+        { text: "Announcements & updates", included: true },
+        { text: "New member onboarding", included: true },
+        { text: "Weekly activity reports", included: true },
+      ],
+      highlight: false,
+    },
   ];
 
   return (
@@ -306,7 +348,7 @@ function Pricing() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {plans.map((plan, i) => (
             <motion.div
               key={i}
