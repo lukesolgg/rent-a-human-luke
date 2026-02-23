@@ -348,60 +348,63 @@ function Pricing() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {plans.map((plan, i) => (
-            <motion.div
-              key={i}
-              variants={fadeIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className={`rounded-xl p-8 border transition-all ${
-                plan.highlight
-                  ? "border-[var(--color-lime)] bg-[var(--color-dark-card)] scale-105"
-                  : "border-[var(--color-dark-border)] bg-[var(--color-dark-card)] hover:border-[var(--color-muted)]/30"
-              }`}
-            >
-              {plan.highlight && (
-                <div className="bg-[var(--color-lime)] text-black text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
-                  BEST VALUE
-                </div>
-              )}
-              <h3 className="text-xl font-semibold mb-1">{plan.name}</h3>
-              <p className="text-sm text-[var(--color-muted)] mb-6">{plan.description}</p>
-              <div className="mb-6">
-                <span className="text-4xl font-bold font-[family-name:var(--font-display)]">
-                  &pound;{plan.price}
-                </span>
-                <span className="text-[var(--color-muted)]">{plan.unit}</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                {plan.features.map((feature, fi) => (
-                  <li key={fi} className="flex items-center gap-3 text-sm">
-                    {feature.included ? (
-                      <FaCheck className="text-[var(--color-lime)] flex-shrink-0" />
-                    ) : (
-                      <FaTimes className="text-[var(--color-muted)]/30 flex-shrink-0" />
-                    )}
-                    <span className={feature.included ? "text-white" : "text-[var(--color-muted)]/40"}>
-                      {feature.text}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="#hire"
-                className={`block text-center py-3 rounded-lg font-semibold text-sm transition-all ${
+        <div className="relative">
+          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6 scrollbar-hide -mx-6 px-6">
+            {plans.map((plan, i) => (
+              <motion.div
+                key={i}
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className={`rounded-xl p-8 border transition-all snap-center flex-shrink-0 w-[300px] flex flex-col ${
                   plan.highlight
-                    ? "bg-[var(--color-lime)] text-black hover:bg-[var(--color-lime-dark)]"
-                    : "border border-[var(--color-dark-border)] hover:border-[var(--color-muted)]"
+                    ? "border-[var(--color-lime)] bg-[var(--color-dark-card)]"
+                    : "border-[var(--color-dark-border)] bg-[var(--color-dark-card)] hover:border-[var(--color-muted)]/30"
                 }`}
               >
-                Hire for {plan.name}
-              </a>
-            </motion.div>
-          ))}
+                {plan.highlight && (
+                  <div className="bg-[var(--color-lime)] text-black text-xs font-bold px-3 py-1 rounded-full inline-block mb-4 self-start">
+                    BEST VALUE
+                  </div>
+                )}
+                <h3 className="text-xl font-semibold mb-1">{plan.name}</h3>
+                <p className="text-sm text-[var(--color-muted)] mb-6">{plan.description}</p>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold font-[family-name:var(--font-display)]">
+                    &pound;{plan.price}
+                  </span>
+                  <span className="text-[var(--color-muted)]">{plan.unit}</span>
+                </div>
+                <ul className="space-y-3 mb-8 flex-grow">
+                  {plan.features.map((feature, fi) => (
+                    <li key={fi} className="flex items-center gap-3 text-sm">
+                      {feature.included ? (
+                        <FaCheck className="text-[var(--color-lime)] flex-shrink-0" />
+                      ) : (
+                        <FaTimes className="text-[var(--color-muted)]/30 flex-shrink-0" />
+                      )}
+                      <span className={feature.included ? "text-white" : "text-[var(--color-muted)]/40"}>
+                        {feature.text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="#hire"
+                  className={`block text-center py-3 rounded-lg font-semibold text-sm transition-all ${
+                    plan.highlight
+                      ? "bg-[var(--color-lime)] text-black hover:bg-[var(--color-lime-dark)]"
+                      : "border border-[var(--color-dark-border)] hover:border-[var(--color-muted)]"
+                  }`}
+                >
+                  Hire for {plan.name}
+                </a>
+              </motion.div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-[var(--color-muted)]/40 mt-2">Swipe to see all plans &rarr;</p>
         </div>
 
         <motion.p
