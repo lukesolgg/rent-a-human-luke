@@ -423,46 +423,46 @@ function Pricing() {
 function Portfolio() {
   const projects = [
     {
+      title: "ResearchPal - AI Research Generator",
+      description: "AI-powered research report generator with follow-up Q&A, auto-generated charts, and multi-provider fallback (Groq, Gemini, OpenAI).",
+      tech: ["Next.js", "TypeScript", "Groq AI", "Recharts"],
+      link: "https://research-generator-nu.vercel.app",
+      github: "https://github.com/lukesolgg/ai-research-generator",
+    },
+    {
+      title: "Dashly - SaaS Analytics Dashboard",
+      description: "Full-featured SaaS dashboard with revenue charts, customer management, analytics, and settings. Dark theme with responsive sidebar.",
+      tech: ["Next.js", "TypeScript", "Recharts", "Tailwind CSS"],
+      link: "https://saas-dashboard-seven-pied.vercel.app",
+      github: "https://github.com/lukesolgg/saas-dashboard",
+    },
+    {
+      title: "LaunchIt - Solana Token Launchpad",
+      description: "Create and deploy SPL tokens on Solana devnet. Wallet connection, token creation form, dashboard with Explorer links.",
+      tech: ["Next.js", "TypeScript", "Solana Web3.js", "SPL Token"],
+      link: "https://launchit-lyart.vercel.app",
+      github: "https://github.com/lukesolgg/launchit",
+    },
+    {
+      title: "BotPilot - Discord Bot Dashboard",
+      description: "Discord bot management dashboard with server stats, moderation logs, command analytics, and bot settings. Includes full Discord.js bot code.",
+      tech: ["Next.js", "TypeScript", "Discord.js", "Recharts"],
+      link: "https://discord-dashboard-lime.vercel.app",
+      github: "https://github.com/lukesolgg/aio-discord-bot",
+    },
+    {
+      title: "ShopFront - E-Commerce Storefront",
+      description: "Modern e-commerce store with product catalog, cart system, checkout flow, and order confirmation. Clean minimalist design.",
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      link: "https://ecommerce-store-tau-three.vercel.app",
+      github: "https://github.com/lukesolgg/base-ecom-front",
+    },
+    {
       title: "Soms Pot - Thai Takeaway",
-      description: "Full business website for a real Thai restaurant. Menu, ordering flow, responsive design.",
+      description: "Full business website for a real Thai restaurant. Menu, ordering flow, responsive design. Built for a real client.",
       tech: ["React", "JavaScript", "Tailwind CSS"],
-      link: "https://soms-pot-website.vercel.app/",
+      link: "https://soms-pot-website.vercel.app",
       github: "https://github.com/lukesolgg/soms-pot-website",
-    },
-    {
-      title: "Solana Swap DApp",
-      description: "Decentralised token swap application on Solana. Real-time price data, wallet integration.",
-      tech: ["TypeScript", "Solana Web3.js", "Next.js"],
-      link: "https://solana-swap-dapp.vercel.app/",
-      github: "https://github.com/lukesolgg/solana-swap-dapp",
-    },
-    {
-      title: "Personal Finance Manager",
-      description: "Income & expense tracker with budgeting dashboard. Built with React and Redux.",
-      tech: ["React", "TypeScript", "Redux"],
-      link: "https://personal-finance-manager.vercel.app/",
-      github: "https://github.com/lukesolgg/Personal-Finance-Manager",
-    },
-    {
-      title: "Career Planner AI",
-      description: "AI-powered career path planning tool with personalised recommendations and goal tracking.",
-      tech: ["TypeScript", "Next.js", "AI/ML"],
-      link: "https://career-planner-ai.vercel.app/",
-      github: "https://github.com/lukesolgg/Career-Planner-AI",
-    },
-    {
-      title: "Ski Holiday Planner",
-      description: "Resort browser and trip planner with a clean, modern interface.",
-      tech: ["JavaScript", "React", "Tailwind CSS"],
-      link: "https://ski-holiday-planner.vercel.app/",
-      github: "https://github.com/lukesolgg/ski-holiday-planner",
-    },
-    {
-      title: "Solana Wallet Tracker",
-      description: "Mobile-first wallet balance tracker, transaction history, and token holdings.",
-      tech: ["React Native", "Solana Web3.js", "Expo"],
-      link: "https://solana-mobile-wallet-tracker.vercel.app/",
-      github: "https://github.com/lukesolgg/solana-mobile-wallet-tracker",
     },
   ];
 
